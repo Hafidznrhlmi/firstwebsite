@@ -60,7 +60,7 @@
       color: black; 
     }
 
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
   .nav-links {
     display: none;
     position: absolute;
@@ -421,12 +421,12 @@ html{
       <a href="solution.html">Solution</a>
       <a href="aboutus.html">About Us</a>
       <a href="project.html">Project</a>
+      <a href="#" class="contact-btn">Contact Us</a>
     </div>
 
     <div class="hamburger" id="hamburger">
           &#9776;
     </div>
-    <a href="#" class="contact-btn">Contact Us</a>
   </nav>
 
   <section class="hero">
@@ -670,6 +670,17 @@ Mulai dari laptop, viewboard, televisi, proyektor, hingga berbagai perangkat pen
 
     services.forEach(service => {
       observer.observe(service);
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
     });
   });
 </script>
