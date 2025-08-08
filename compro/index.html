@@ -41,7 +41,6 @@
       align-items: center;
       justify-content: space-between;
       z-index: 1000;
-      display:flex;
     }
 
     .logo img {
@@ -53,36 +52,6 @@
       gap: 25px;
       align-items: center;
     }
-
-    .hamburger {
-      display: none;
-      font-size: 30px;
-      cursor: pointer;
-      color: black; 
-    }
-
-  @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 30px;
-    background-color: white;
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
 
     .nav-links a {
       text-decoration: none;
@@ -422,12 +391,9 @@ html{
       <a href="solution.html">Solution</a>
       <a href="aboutus.html">About Us</a>
       <a href="project.html">Project</a>
-      <a href="#" class="contact-btn">Contact Us</a>
     </div>
 
-    <div class="hamburger" id="hamburger">
-          &#9776;
-    </div>
+    <a href="#" class="contact-btn">Contact Us</a>
   </nav>
 
   <section class="hero">
@@ -673,16 +639,7 @@ Mulai dari laptop, viewboard, televisi, proyektor, hingga berbagai perangkat pen
       observer.observe(service);
     });
   });
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.querySelector(".nav-links");
-
-    hamburger.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
-    });
-  });
 </script>
-
 
 
 </body>
