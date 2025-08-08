@@ -53,6 +53,36 @@
       align-items: center;
     }
 
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: black; 
+    }
+
+    @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background-color: white;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
     .nav-links a {
       text-decoration: none;
       color: black;
@@ -393,6 +423,9 @@ html{
       <a href="project.html">Project</a>
     </div>
 
+    <div class="hamburger" id="hamburger">
+          &#9776;
+    </div>
     <a href="#" class="contact-btn">Contact Us</a>
   </nav>
 
